@@ -22,4 +22,9 @@ template "#{node[:geminabox][:path]}/config.ru" do
   owner "www-data"
   group "www-data"
   source "config.ru.erb"
+  variables({
+    :authentication  => node[:geminabox][:authentication],
+    :username        => node[:geminabox][:username],
+    :password        => node[:geminabox][:password],
+  })
 end
