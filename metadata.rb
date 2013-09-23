@@ -10,6 +10,7 @@ recipe            "geminabox", "Installs Geminabox as a Rack app runing with Apa
   supports os
 end
 
+
 depends 'ruby_build'
 depends 'passenger'
 
@@ -17,3 +18,4 @@ attribute "geminabox",
   :display_name => "Geminabox",
   :description => "Install Geminabox as a Rack app."
   :recipes => ["geminabox::default"]
+
