@@ -1,0 +1,98 @@
+{
+  "name": "geminabox",
+  "description": "Installs Geminabox server with Apache/Passenger & Ruby 1.9.3",
+  "long_description": "",
+  "maintainer": "Jason Vanderhoof",
+  "maintainer_email": "jvanderhoof@gazelle.com",
+  "license": "Apache 2.0",
+  "platforms": {
+    "ubuntu": ">= 0.0.0"
+  },
+  "dependencies": {
+    "ruby_build": "~> 0.8.1",
+    "passenger": "~> 0.1.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+    "geminabox": {
+      "display_name": "Geminabox Configuration",
+      "type": "hash",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "geminabox/authentication": {
+      "display_name": "Authentication",
+      "type": "string",
+      "required": "required",
+      "recipes": [
+        "geminabox::default"
+      ],
+      "default": "none",
+      "choice": [
+        "basic",
+        "none"
+      ],
+      "calculated": false
+    },
+    "geminabox/username": {
+      "display_name": "Authentication Username",
+      "type": "string",
+      "required": "recommended",
+      "recipes": [
+        "geminabox::default"
+      ],
+      "default": "",
+      "choice": [
+
+      ],
+      "calculated": false
+    },
+    "geminabox/password": {
+      "display_name": "Authentication Password",
+      "type": "string",
+      "required": "recommended",
+      "recipes": [
+        "geminabox::default"
+      ],
+      "default": "",
+      "choice": [
+
+      ],
+      "calculated": false
+    },
+    "geminabox/path": {
+      "display_name": "Data Path",
+      "type": "string",
+      "required": "recommended",
+      "recipes": [
+        "geminabox::default"
+      ],
+      "default": "/var/geminabox",
+      "choice": [
+
+      ],
+      "calculated": false
+    }
+  },
+  "groupings": {
+  },
+  "recipes": {
+    "geminabox::default": "Installs Geminabox as a Rack app runing with Apache/Passenger and Ruby 1.9.3."
+  },
+  "version": "0.0.1"
+}
