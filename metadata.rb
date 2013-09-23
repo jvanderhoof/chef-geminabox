@@ -22,7 +22,6 @@ attribute "geminabox/authentication",
   :type => 'string',
   :required => "required",
   :recipes => ["geminabox::default"],
-  :default => 'none',
   :choice => ['basic','none']
 
 attribute "geminabox/username",

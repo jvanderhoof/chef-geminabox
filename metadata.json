@@ -42,7 +42,6 @@
       "recipes": [
         "geminabox::default"
       ],
-      "default": "none",
       "choice": [
         "basic",
         "none"
